@@ -1,0 +1,125 @@
+/* ============
+   Design Tokens
+   ============ */
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e5e7eb;
+  --brand: #111827;
+  --accent: #2563eb;
+  --radius-s: 10px;
+  --radius-m: 14px;
+  --radius-l: 20px;
+  --shadow-1: 0 6px 24px rgba(15, 23, 42, 0.06);
+  --shadow-2: 0 10px 30px rgba(2, 6, 23, 0.1);
+  --gap: 16px;
+  --transition: 0.18s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --card: #0f172a;
+    --text: #e5edff;
+    --muted: #9aa6c7;
+    --border: #1f2a44;
+    --brand: #e5edff;
+    --accent: #60a5fa;
+    --shadow-1: 0 6px 24px rgba(0, 0, 0, 0.35);
+    --shadow-2: 0 10px 30px rgba(0, 0, 0, 0.45);
+  }
+}
+
+/* ===== Base Reset ===== */
+* {
+  box-sizing: border-box;
+}
+:root {
+  --header-h: 10px; /* نفس ارتفاع الهيدر */
+}
+
+body {
+  margin: 0;
+  padding-top: 10px;
+
+}
+
+
+/* ===== Typography ===== */
+h1,
+h2,
+h3 {
+  margin: 0 0 6px;
+  font-size: 100%;
+  letter-spacing: 0.9px;
+  color: #040505;
+}
+.title {
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: 800;
+  letter-spacing: 0.9px;
+  font-family: 'Playfair Display', serif;
+}
+.subtitle {
+  color: var(--text);
+  font-size: 13px;
+}
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ===== Container ===== */
+.container {
+  /*max-width: 1200px;*/
+  margin: 0 ;
+  padding: 0 16px;
+  max-width: 1200px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: var(--radius-s);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn.primary {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+.btn.ghost {
+  background: transparent;
+  color: var(--text);
+}
+.btn.tiny {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+/* ===== Utility & Animation ===== */
+.fade-in {
+  animation: fadeIn ease 0.6s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

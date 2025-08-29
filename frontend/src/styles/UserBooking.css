@@ -1,0 +1,52 @@
+/* ================
+   User Bookings
+   ================ */
+.booking-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-s);
+  background: var(--card);
+  box-shadow: var(--shadow-1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booking-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+}
+
+.booking-item strong {
+  font-size: 1rem;
+  color: var(--brand);
+}
+
+.booking-item .pill {
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.pill {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.st-pending {
+  background: #fffacc;
+  color: #7a5d00;
+}
+
+.st-accepted {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.st-cancelled {
+  background: #ffe4e6;
+  color: #9f1239;
+}

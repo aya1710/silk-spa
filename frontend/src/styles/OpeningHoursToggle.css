@@ -1,0 +1,78 @@
+.hours-btn {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+.hours-btn:hover { background: var(--accent); color: #fff; }
+.hours-btn:active { transform: scale(0.98); }
+
+
+.hours-anchor {
+  position: fixed;
+  inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 9998;
+}
+
+
+.hours-popup {
+
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.88);
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  width: 260px;
+  max-height: 280px;
+  overflow-y: auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-title { font-weight: bold; margin-bottom: 10px; display: block; }
+
+.hours-list {
+  list-style: none; margin: 0; padding: 0; font-size: 14px;
+}
+.hours-item { padding: 5px 0; }
+.hours-item.today-row { font-weight: bold; color: #facc15; }
+
+/* Scrollbar */
+.hours-popup::-webkit-scrollbar { width: 6px; }
+.hours-popup::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3); border-radius: 8px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.hours-popup-inline {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 6px;
+  background: rgba(147, 124, 39, 0.88);
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  width: 260px;
+  max-height: 280px;
+  overflow-y: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease;
+  z-index: 1000;
+right: 0;
+left: auto;
+
+}
+
