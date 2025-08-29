@@ -29,3 +29,7 @@ npm run dev
 Frontend → http://localhost:5173
 
 Backend → http://localhost:3000
+
+### Environment variables
+Create a `.env` file inside the `backend/` folder with your PostgreSQL settings (host, port, database, user, password).  
+This file is ignored by Git and must be created locally for the server to run.
